@@ -1083,3 +1083,13 @@ footer {
         display: none !important;
     }
 }
+
+/* ===== Paiement MonCash / NatCash : téléphone, montant, code de confirmation ===== */
+.mm-box { background: #fdf6f0; border: 1px solid #e5d9d0; border-radius: 12px; padding: 16px; margin-top: 12px; }
+.mm-box h4 { color: var(--primary); margin-bottom: 8px; font-size: 1.05rem; }
+.mm-instructions { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.mm-instructions strong { color: var(--text-dark); }
+.mm-confirm { display: flex; gap: 8px; align-items: flex-start; font-size: 0.88rem; color: var(--text-dark); cursor: pointer; margin-top: 4px; }
+.mm-confirm input { margin-top: 3px; accent-color: var(--primary); }
+.mm-error { margin-top: 10px; padding: 10px 12px; border-radius: 8px; background: #ffeaea; border: 1px solid #d63638; color: #a02020; font-size: 0.86rem; }
+.btn.is-loading { opacity: 0.7; pointer-events: none; }
