@@ -6,8 +6,8 @@
     <title>Délices de Jonathan — Pâtisserie Artisanale | Gâteaux, Cupcakes & Viennoiseries sur mesure</title>
 
     <!-- ===== SEO : balises de base ===== -->
-    <meta name="description" content="Délices de Jonathan, pâtisserie artisanale haut de gamme : gâteaux, cupcakes, tartes, viennoiseries et créations sur-mesure. Commandez en ligne, paiement flexible (MonCash, NatCash, carte, cash) et livraison à domicile ou retrait sur place.">
-    <meta name="keywords" content="pâtisserie, gâteau sur mesure, cupcakes, viennoiseries, tartes, donuts, biscuits, pâtisserie artisanale, gâteau anniversaire, gâteau mariage, MonCash, NatCash, livraison pâtisserie">
+    <meta name="description" content="Délices de Jonathan, pâtisserie artisanale haut de gamme : gâteaux, cupcakes, tartes, viennoiseries et créations sur-mesure. Commandez en ligne, paiement par transfert MonCash et livraison à domicile ou retrait sur place.">
+    <meta name="keywords" content="pâtisserie, gâteau sur mesure, cupcakes, viennoiseries, tartes, donuts, biscuits, pâtisserie artisanale, gâteau anniversaire, gâteau mariage, MonCash, livraison pâtisserie">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Délices de Jonathan">
     <link rel="canonical" href="https://www.delicesdejonathan.com/">
@@ -18,11 +18,11 @@
     <!-- ===== Open Graph (Facebook, WhatsApp, LinkedIn...) ===== -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Délices de Jonathan — Pâtisserie Artisanale">
-    <meta property="og:description" content="Gâteaux, cupcakes, tartes et viennoiseries artisanales. Commandez en ligne avec livraison ou retrait sur place, paiement par MonCash, NatCash, carte ou cash.">
+    <meta property="og:description" content="Gâteaux, cupcakes, tartes et viennoiseries artisanales. Commandez en ligne avec livraison ou retrait sur place, paiement par transfert MonCash.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://www.delicesdejonathan.com/">
     <meta property="og:site_name" content="Délices de Jonathan">
-    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale" content="fr_HT">
 
     <!-- ===== Twitter Card ===== -->
     <meta name="twitter:card" content="summary_large_image">
@@ -40,13 +40,14 @@
         "description": "Pâtisserie artisanale haut de gamme proposant gâteaux, cupcakes, tartes, viennoiseries et créations sur-mesure.",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "124 Rue de la Gourmandise",
-            "addressLocality": "Port-au-Prince",
-            "addressCountry": "FR"
+            "streetAddress": "124 Rue Lamarre",
+            "addressLocality": "Pétion-Ville",
+            "addressRegion": "Ouest",
+            "addressCountry": "HT"
         },
-        "telephone": "+33123456789",
+        "telephone": "+50934567890",
         "servesCuisine": "Pâtisserie",
-        "priceRange": "$$",
+        "priceRange": "150 - 2500 HTG",
         "openingHoursSpecification": [
             { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "07:00", "closes": "19:30" },
             { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "07:00", "closes": "13:00" }
@@ -59,7 +60,1116 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="stylesheet" href="style.css">
+    <style>
+/* --- VARIABLES & CSS RESET --- */
+:root {
+    --primary: #5c3d2e;      /* Chocolat intense */
+    --secondary: #f8c8dc;    /* Rose poudré */
+    --accent: #d4a373;       /* Caramel / Or */
+    --bg-light: #fffcf8;     /* Crème très doux */
+    --bg-card: #ffffff;
+    --text-dark: #2b1e1a;
+    --text-muted: #7d6b65;
+    --shadow: 0 10px 30px rgba(92, 61, 46, 0.08);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .brand-font {
+    font-family: 'Playfair Display', serif;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- UTILITIES --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section-padding { padding: 80px 0; }
+.text-center { text-align: center; }
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: var(--secondary);
+    bottom: -8px;
+    left: 25%;
+    border-radius: 2px;
+}
+.section-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+.btn-primary {
+    background-color: var(--primary);
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #432b20;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(92, 61, 46, 0.3);
+}
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+.btn-secondary:hover {
+    background-color: #f4b2cb;
+    transform: translateY(-2px);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    z-index: 2;
+}
+.badge-bestseller { background-color: #e63946; }
+.badge-heart { background-color: #ffb703; }
+.badge-new { background-color: #2a9d8f; }
+
+/* --- HEADER & NAVIGATION (CORRIGÉ & ÉQUILIBRÉ) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 252, 248, 0.98);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(92, 61, 46, 0.08);
+    transition: var(--transition);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 0;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+.logo i {
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+.nav-links a {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 0.88rem;
+    white-space: nowrap;
+    color: var(--text-dark);
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-track-link {
+    text-align: center;
+    line-height: 1.15;
+    display: inline-block !important;
+    white-space: normal !important;
+    max-width: 85px;
+    font-size: 0.82rem !important;
+}
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+.cart-icon-btn {
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: var(--primary);
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    line-height: 1;
+    z-index: 10;
+    box-shadow: 0 0 0 2px #fffcf8;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    min-height: 650px;
+    background: linear-gradient(rgba(255, 252, 248, 0.85), rgba(255, 252, 248, 0.7)), 
+                url('https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+.hero-title {
+    font-size: 3.8rem;
+    color: var(--primary);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+.hero-tagline {
+    font-size: 1.3rem;
+    color: var(--accent);
+    font-style: italic;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.hero-text {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+.hero-img-wrapper {
+    position: relative;
+    text-align: center;
+}
+.hero-img-wrapper img {
+    border-radius: 30px 100px 30px 30px;
+    box-shadow: var(--shadow);
+    transform: rotate(-2deg);
+    transition: var(--transition);
+}
+.hero-img-wrapper img:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+/* --- FILTERABLE PRODUCTS --- */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.filter-btn {
+    padding: 8px 20px;
+    border: 1px solid var(--secondary);
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+.product-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+}
+.product-img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+}
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.product-title {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+.product-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+.product-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* --- SPECIALITES --- */
+.specialites { background-color: #fcf4f0; }
+
+/* --- ABOUT --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.about-img img {
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+.features-list {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+.feature-item i {
+    color: var(--accent);
+}
+
+/* --- CUSTOM CAKE --- */
+.custom-cake {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--bg-light) 100%);
+    border-radius: 20px;
+    padding: 50px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* --- GALLERY --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 250px;
+    cursor: pointer;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(92, 61, 46, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+    color: #fff;
+    font-size: 1.5rem;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+/* --- TESTIMONIALS --- */
+.testimonials-slider {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.testimonial-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.testimonial-card {
+    min-width: 100%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+.client-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    object-fit: cover;
+}
+.stars { color: #ffc107; margin-bottom: 15px; }
+
+/* --- CONTACT & MAP --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.contact-info-item i {
+    background-color: var(--secondary);
+    color: var(--primary);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+.map-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* --- FORMS --- */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
+    transition: var(--transition);
+}
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.2);
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* --- CART SIDEBAR / MODAL --- */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 380px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+    z-index: 1001;
+    transition: right 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.cart-sidebar.open { right: 0; }
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+.close-cart {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.cart-items {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: 20px 0;
+}
+.cart-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+.cart-item-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.cart-item-details { flex-grow: 1; }
+.cart-item-title { font-weight: 600; font-size: 0.95rem; }
+.cart-item-qty {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+.qty-btn {
+    background: #eee;
+    border: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cart-footer {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* --- MODAL GENERAL --- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+}
+.modal-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+}
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* --- FLOATING WHATSAPP BUTTON --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: var(--transition);
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* --- LIGHTBOX --- */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+}
+.lightbox.open { opacity: 1; pointer-events: all; }
+.lightbox img { max-width: 85%; max-height: 85vh; border-radius: 10px; }
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 60px 0 20px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer-logo { font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { color: #ddd; transition: var(--transition); }
+.footer-links a:hover { color: var(--secondary); padding-left: 5px; }
+.social-icons { display: flex; gap: 15px; margin-top: 15px; }
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+.social-icons a:hover { background: var(--secondary); color: var(--primary); }
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 1024px) {
+    .nav-links { gap: 12px; }
+    .nav-links a { font-size: 0.82rem; }
+}
+
+@media (max-width: 992px) {
+    .hero-title { font-size: 2.8rem; }
+    .hero-container, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .hero-img-wrapper { margin-top: 30px; }
+}
+
+@media (max-width: 900px) {
+    .nav-links {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 75px);
+        background: #fffcf8;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        transition: 0.4s ease;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .nav-links.active { left: 0; }
+    .nav-links a { font-size: 1.1rem; }
+    .nav-track-link {
+        white-space: nowrap !important;
+        max-width: none;
+        text-align: center;
+        font-size: 1.1rem !important;
+    }
+    .hamburger { display: block; }
+}
+
+@media (max-width: 768px) {
+    .form-row { grid-template-columns: 1fr; }
+    .cart-sidebar { width: 100%; right: -100%; }
+}
+
+/* ======================================================= */
+/* ===============  NOUVELLES FONCTIONNALITÉS  ============ */
+/* ======================================================= */
+
+/* --- BARRE DE RECHERCHE PRODUITS --- */
+.search-bar-wrapper {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    position: relative;
+}
+.search-bar-wrapper i.fa-magnifying-glass {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+#productSearchInput {
+    width: 100%;
+    padding: 14px 45px;
+    border: 1px solid #e5d9d0;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: #fff;
+    transition: var(--transition);
+}
+#productSearchInput:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.2);
+}
+.search-clear-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    display: none;
+}
+.search-clear-btn.visible { display: block; }
+.no-results-msg {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    grid-column: 1 / -1;
+}
+.no-results-msg i { font-size: 2.5rem; color: var(--secondary); margin-bottom: 15px; display: block; }
+
+/* --- CARTE PRODUIT CLIQUABLE (fiche détaillée) --- */
+.product-card.clickable { cursor: pointer; }
+
+/* --- FICHE PRODUIT DÉTAILLÉE --- */
+.product-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.product-detail-grid img {
+    border-radius: 15px;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+.product-detail-category {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 4px 14px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.product-detail-stock {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 8px 0;
+}
+.product-detail-stock.in-stock { color: #2a9d8f; }
+.product-detail-stock.out-stock { color: #e63946; }
+.qty-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0;
+}
+.qty-selector .qty-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    border-radius: 50%;
+}
+.qty-selector span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    min-width: 25px;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .product-detail-grid { grid-template-columns: 1fr; }
+}
+
+/* --- ÉTAPES DE COMMANDE (STEPPER) --- */
+.checkout-steps {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+.checkout-step-dot {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+.checkout-step-dot .dot-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #eee;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+}
+.checkout-step-dot.active .dot-num { background: var(--primary); color: #fff; }
+.checkout-step-dot.active { color: var(--primary); }
+.checkout-step-line { width: 25px; height: 2px; background: #eee; align-self: center; margin-top: -20px; }
+
+.checkout-step-panel { display: none; }
+.checkout-step-panel.active { display: block; }
+
+/* --- ZONES DE LIVRAISON --- */
+.delivery-mode-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+.radio-card {
+    border: 1.5px solid #e5d9d0;
+    border-radius: 12px;
+    padding: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.radio-card input { accent-color: var(--primary); }
+.radio-card.selected {
+    border-color: var(--primary);
+    background: #fdf6f0;
+}
+.radio-card i { color: var(--accent); font-size: 1.2rem; }
+@media (max-width: 600px) {
+    .delivery-mode-options { grid-template-columns: 1fr; }
+}
+
+/* --- RÉCAPITULATIF DE COMMANDE --- */
+.order-summary-box {
+    background: #fdf6f0;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0 20px;
+}
+.order-summary-box .summary-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+.order-summary-box .summary-line.total {
+    border-top: 1px solid #e5d9d0;
+    padding-top: 12px;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+.order-summary-items { max-height: 150px; overflow-y: auto; margin-bottom: 12px; }
+.order-summary-items div { font-size: 0.88rem; display: flex; justify-content: space-between; margin-bottom: 5px; }
+
+/* --- MODE DE PAIEMENT --- */
+.step-nav-btns { display: flex; gap: 10px; margin-top: 20px; }
+.step-nav-btns .btn { flex: 1; }
+.btn-outline {
+    background: #fff;
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+}
+.btn-outline:hover { background: #fdf6f0; }
+
+/* --- CONFIRMATION DE COMMANDE --- */
+.order-confirm-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.order-confirm-header i {
+    font-size: 3rem;
+    color: #2a9d8f;
+    margin-bottom: 10px;
+}
+.order-number-box {
+    background: var(--primary);
+    color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.order-confirm-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 0.92rem;
+}
+.order-confirm-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 15px;
+    padding: 12px;
+    background: #fdf6f0;
+    border-radius: 10px;
+}
+.confirm-action-btns { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.confirm-action-btns .btn { flex: 1; min-width: 140px; font-size: 0.85rem; padding: 12px 10px; }
+
+/* --- SUIVI DE COMMANDE --- */
+.tracking-box {
+    max-width: 550px;
+    margin: 0 auto;
+}
+.tracking-search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.tracking-search input {
+    flex-grow: 1;
+}
+.tracking-result { display: none; }
+.tracking-result.visible { display: block; }
+.tracking-not-found {
+    display: none;
+    text-align: center;
+    color: #e63946;
+    font-weight: 600;
+    background: #fdecec;
+    padding: 15px;
+    border-radius: 10px;
+}
+.tracking-not-found.visible { display: block; }
+.tracking-progress {
+    list-style: none;
+    margin-top: 25px;
+}
+.tracking-progress li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    position: relative;
+}
+.tracking-progress li::before {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 32px;
+    width: 2px;
+    height: calc(100% - 10px);
+    background: #eee;
+}
+.tracking-progress li:last-child::before { display: none; }
+.tracking-step-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #eee;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    z-index: 1;
+}
+.tracking-progress li.done .tracking-step-icon { background: #2a9d8f; color: #fff; }
+.tracking-progress li.current .tracking-step-icon { background: var(--primary); color: #fff; }
+.tracking-progress li.done::before { background: #2a9d8f; }
+.tracking-step-label { font-weight: 500; color: var(--text-muted); }
+.tracking-progress li.done .tracking-step-label,
+.tracking-progress li.current .tracking-step-label { color: var(--text-dark); font-weight: 600; }
+.tracking-order-summary {
+    background: #fdf6f0;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+/* --- IMPRESSION DU REÇU --- */
+@media print {
+    body * { visibility: hidden; }
+    #printableReceipt, #printableReceipt * { visibility: visible; }
+    #printableReceipt {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    #printableReceipt .modal-close,
+    #printableReceipt .confirm-action-btns,
+    #printableReceipt .order-confirm-note {
+        display: none !important;
+    }
+}
+
+/* ===== Paiement MonCash ===== */
+.mm-error { margin-top: 10px; padding: 10px 12px; border-radius: 8px; background: #ffeaea; border: 1px solid #d63638; color: #a02020; font-size: 0.86rem; }
+.btn.is-loading { opacity: 0.7; pointer-events: none; }
+
+/* ===== MonCash : transfert manuel + administration ===== */
+.mc-card { background:#fff; border:1px solid #e5d9d0; border-radius:14px; padding:16px; margin-top:12px; box-shadow:0 4px 14px rgba(92,61,46,.08); }
+.mc-head { display:flex; align-items:center; gap:12px; margin-bottom:12px; flex-wrap:wrap; }
+.mc-head h4 { color:var(--primary); font-size:1.05rem; margin:0; }
+.mc-logo { background:#e30613; color:#fff; font-weight:800; padding:5px 12px; border-radius:8px; font-size:1rem; letter-spacing:.2px; }
+.mc-logo b { font-weight:800; color:#fff; }
+.mc-logo-img { height:34px; width:auto; }
+.mc-row { display:flex; align-items:center; flex-wrap:wrap; gap:6px 10px; padding:9px 0; border-bottom:1px dashed #e5d9d0; font-size:.92rem; }
+.mc-row span { color:var(--text-muted); flex:1 1 130px; }
+.mc-row strong { color:var(--text-dark); flex:1 1 150px; word-break:break-word; }
+.mc-copy { flex:0 0 auto; border:1px solid var(--primary); background:#fdf6f0; color:var(--primary); border-radius:20px; padding:6px 12px; font-size:.8rem; font-weight:600; cursor:pointer; font-family:inherit; }
+.mc-copy.copied { background:#2e7d32; border-color:#2e7d32; color:#fff; }
+.mc-steps { margin:14px 0 8px; padding:0; list-style:none; counter-reset:mc; }
+.mc-steps li { counter-increment:mc; display:flex; gap:10px; align-items:flex-start; font-size:.88rem; color:var(--text-dark); line-height:1.45; padding:5px 0; }
+.mc-steps li::before { content:counter(mc); flex:0 0 24px; height:24px; border-radius:50%; background:var(--primary); color:#fff; font-size:.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; }
+.mc-pin, .mc-note { font-size:.82rem; color:var(--text-muted); background:#fdf6f0; border-radius:8px; padding:9px 11px; margin-top:8px; }
+.mc-cta { width:100%; margin-top:12px; }
+.mc-success { background:#e8f5e9; border:1px solid #2e7d32; color:#1b5e20; border-radius:10px; padding:16px; line-height:1.5; }
+.adm-tabs { display:flex; gap:8px; margin:12px 0; flex-wrap:wrap; }
+.adm-tabs button { border:1px solid var(--primary); background:#fff; color:var(--primary); border-radius:20px; padding:7px 14px; cursor:pointer; font-family:inherit; font-weight:600; }
+.adm-tabs button.active { background:var(--primary); color:#fff; }
+.adm-order { border:1px solid #e5d9d0; border-radius:12px; padding:14px; margin-bottom:12px; font-size:.88rem; line-height:1.6; }
+.adm-order h4 { color:var(--primary); margin-bottom:4px; }
+.adm-badge { display:inline-block; padding:2px 10px; border-radius:12px; background:#fdf6f0; border:1px solid #e5d9d0; font-size:.78rem; font-weight:700; }
+.adm-actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; align-items:center; }
+.adm-actions input { flex:1 1 180px; padding:9px; border:1px solid #e5d9d0; border-radius:8px; font-family:inherit; }
+.mc-btn-ok, .mc-btn-no { border:0; color:#fff; border-radius:8px; padding:10px 14px; font-weight:700; cursor:pointer; font-family:inherit; }
+.mc-btn-ok { background:#2e7d32; } .mc-btn-no { background:#c62828; }
+.adm-receipt img { max-width:160px; max-height:160px; border-radius:8px; border:1px solid #e5d9d0; display:block; margin:6px 0; }
+.adm-link { background:none; border:0; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:.8rem; font-family:inherit; }
+    .mc-pay-head{display:flex;align-items:center;gap:10px;padding:12px 14px;border:2px solid var(--primary);border-radius:12px;margin-bottom:10px;font-weight:600}.mc-pay-head i{margin-left:auto;color:var(--primary)}
+.mc-opt{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border:1.5px solid #eee;border-radius:12px;margin-bottom:8px;cursor:pointer;transition:.2s}.mc-opt:hover{border-color:var(--primary);transform:translateY(-1px)}.mc-opt.sel{border-color:var(--primary);background:rgba(0,0,0,.02)}.mc-opt small{display:block;color:var(--text-muted)}
+.mc-direct{padding:10px 4px}#confirmPaymentBtn:disabled{opacity:.7;cursor:wait}
+</style>
 </head>
 <body>
 
@@ -152,8 +1262,8 @@
                         <h3 class="product-title">Gâteau au Chocolat Royale</h3>
                         <p class="product-desc">Biscuit moelleux, ganache intense au chocolat noir 70% et éclat de noisettes perforantes.</p>
                         <div class="product-footer">
-                            <span class="product-price">25 $</span>
-                            <button class="btn btn-primary add-to-cart-btn" data-id="spec-1" data-title="Gâteau au Chocolat Royale" data-price="25">Ajouter</button>
+                            <span class="product-price">2 000 HTG</span>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="spec-1" data-title="Gâteau au Chocolat Royale" data-price="2000">Ajouter</button>
                         </div>
                     </div>
                 </div>
@@ -165,8 +1275,8 @@
                         <h3 class="product-title">Red Velvet Élégance</h3>
                         <p class="product-desc">Texture veloutée légendaire rehaussée d'un glaçage onctueux au cream cheese et vanille Bourbon.</p>
                         <div class="product-footer">
-                            <span class="product-price">30 $</span>
-                            <button class="btn btn-primary add-to-cart-btn" data-id="spec-2" data-title="Red Velvet Élégance" data-price="30">Ajouter</button>
+                            <span class="product-price">2 500 HTG</span>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="spec-2" data-title="Red Velvet Élégance" data-price="2500">Ajouter</button>
                         </div>
                     </div>
                 </div>
@@ -178,8 +1288,8 @@
                         <h3 class="product-title">Cheesecake New-Yorkais</h3>
                         <p class="product-desc">La recette originale creamy sur une base croustillante de biscuits Pur Beurre.</p>
                         <div class="product-footer">
-                            <span class="product-price">28 $</span>
-                            <button class="btn btn-primary add-to-cart-btn" data-id="spec-3" data-title="Cheesecake New-Yorkais" data-price="28">Ajouter</button>
+                            <span class="product-price">2 300 HTG</span>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="spec-3" data-title="Cheesecake New-Yorkais" data-price="2300">Ajouter</button>
                         </div>
                     </div>
                 </div>
@@ -314,14 +1424,21 @@
                         <i class="fa-solid fa-location-dot"></i>
                         <div>
                             <h4>Adresse</h4>
-                            <p style="color:var(--text-muted)">124 Rue de la Gourmandise, Paris, France</p>
+                            <p style="color:var(--text-muted)">124 Rue Lamarre, Pétion-Ville, Port-au-Prince, Haïti</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fa-solid fa-truck"></i>
+                        <div>
+                            <h4>Zones de livraison en Haïti</h4>
+                            <p style="color:var(--text-muted)">Delmas, Pétion-Ville, Port-au-Prince (centre), Tabarre, Carrefour, Croix-des-Bouquets, Kenscoff / Laboule et autres villes sur demande</p>
                         </div>
                     </div>
                     <div class="contact-info-item">
                         <i class="fa-solid fa-phone"></i>
                         <div>
                             <h4>Téléphone</h4>
-                            <p style="color:var(--text-muted)">+33 1 23 45 67 89</p>
+                            <p style="color:var(--text-muted)">+509 3456 7890</p>
                         </div>
                     </div>
                     <div class="contact-info-item">
@@ -340,7 +1457,7 @@
                     </div>
 
                     <div class="map-container">
-                        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://maps.google.com/maps?q=Paris%20France&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+                        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://maps.google.com/maps?q=P%C3%A9tion-Ville%20Ha%C3%AFti&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -403,20 +1520,20 @@
                 <div>
                     <h4>Contact</h4>
                     <p style="color:#ddd; margin-top:15px; font-size:0.9rem;">
-                        124 Rue de la Gourmandise, Port-au-Prince , HAITI<br>
-                        +33 1 23 45 67 89<br>
+                        124 Rue Lamarre, Pétion-Ville, Haïti<br>
+                        +509 3456 7890<br>
                         contact@delicesdejonathan.com
                     </p>
                 </div>
             </div>
 
             <div class="copyright">
-                <p>© 2026 Délices de Jonathan — Tous droits réservés.</p>
+                <p>© 2026 Délices de Jonathan — Tous droits réservés. · <a href="#admin" style="color:inherit; opacity:.7;">Espace admin</a></p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/33123456789?text=Bonjour,%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20p%C3%A2tisseries." class="whatsapp-float" target="_blank" aria-label="Contacter sur WhatsApp">
+    <a href="https://wa.me/50934567890?text=Bonjour,%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20p%C3%A2tisseries." class="whatsapp-float" target="_blank" aria-label="Contacter sur WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -430,7 +1547,7 @@
         <div class="cart-footer">
             <div class="cart-total">
                 <span>Total :</span>
-                <span id="cartTotalAmount">0 $</span>
+                <span id="cartTotalAmount">0 HTG</span>
             </div>
             <button class="btn btn-primary" style="width:100%; margin-bottom:10px;" id="checkoutBtn">Passer la commande</button>
             <button class="btn" style="width:100%; background:#f8d7da; color:#721c24;" id="clearCartBtn">Vider le panier</button>
@@ -485,7 +1602,7 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Adresse de livraison</label>
-                                <input type="text" id="orderAddress" class="form-control" required>
+                                <input type="text" id="orderAddress" class="form-control" placeholder="Ex : 15 Rue Lamarre, Pétion-Ville" required>
                             </div>
                             <div class="form-group">
                                 <label>Ville / Zone</label>
@@ -524,50 +1641,26 @@
                         <div class="order-summary-items" id="checkoutSummaryItems"></div>
                         <div class="summary-line">
                             <span>Sous-total</span>
-                            <span id="summarySubtotal">0 $</span>
+                            <span id="summarySubtotal">0 HTG</span>
                         </div>
                         <div class="summary-line">
                             <span>Frais de livraison</span>
-                            <span id="summaryDeliveryFee">0 $</span>
+                            <span id="summaryDeliveryFee">0 HTG</span>
                         </div>
                         <div class="summary-line total">
                             <span>Total</span>
-                            <span id="summaryTotal">0 $</span>
+                            <span id="summaryTotal">0 HTG</span>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>Mode de paiement</label>
-                        <div class="payment-options" id="paymentOptions">
-                            <label class="payment-option selected" data-payment="Paiement à la livraison">
-                                <input type="radio" name="paymentMethod" value="Paiement à la livraison" style="display:none;" checked>
-                                <i class="fa-solid fa-money-bill-wave"></i>
-                                <span>À la livraison</span>
-                            </label>
-                            <label class="payment-option" data-payment="Carte bancaire">
-                                <input type="radio" name="paymentMethod" value="Carte bancaire" style="display:none;">
-                                <i class="fa-solid fa-credit-card"></i>
-                                <span>Carte bancaire</span>
-                            </label>
-                            <label class="payment-option" data-payment="MonCash">
-                                <input type="radio" name="paymentMethod" value="MonCash" style="display:none;">
-                                <i class="fa-solid fa-mobile-screen-button"></i>
-                                <span>MonCash</span>
-                            </label>
-                            <label class="payment-option" data-payment="NatCash">
-                                <input type="radio" name="paymentMethod" value="NatCash" style="display:none;">
-                                <i class="fa-solid fa-mobile-screen-button"></i>
-                                <span>NatCash</span>
-                            </label>
-                        </div>
-                        <p id="paymentApiNote" style="display:none; font-size:0.85rem; color:var(--text-muted); background:#fdf6f0; padding:10px; border-radius:8px; margin-top:5px;">
-                            <i class="fa-solid fa-circle-info"></i> Le paiement en ligne sécurisé (carte, MonCash, NatCash) nécessite la connexion d'une API de paiement côté serveur. Votre choix est enregistré et un agent vous contactera pour finaliser ce paiement.
-                        </p>
-                    </div>
+                        <div id="moncashBox"></div>
+                                            </div>
 
                     <div class="step-nav-btns">
                         <button type="button" class="btn btn-outline" onclick="goToCheckoutStep(1)">Retour</button>
-                        <button type="button" class="btn btn-primary" onclick="processOrder()">Confirmer le paiement</button>
+                        <button type="button" class="btn btn-primary" id="confirmPaymentBtn" onclick="onPayClick()">Confirmer le paiement</button>
                     </div>
                 </div>
             </form>
@@ -607,7 +1700,7 @@
                         <input type="number" id="customGuests" min="1" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label>Budget estimé ($)</label>
+                        <label>Budget estimé (HTG)</label>
                         <input type="number" id="customBudget" class="form-control">
                     </div>
                 </div>
@@ -674,10 +1767,901 @@
         </div>
     </div>
 
+    <!-- ===== MONCASH : CONFIRMATION DU TRANSFERT ===== -->
+    <div class="modal-overlay" id="moncashConfirmModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('moncashConfirmModal')">&times;</button>
+            <h2 class="section-title" style="font-size:1.8rem;">Confirmer mon paiement MonCash</h2>
+            <p id="mcRefusedNote" class="mm-error" style="display:none;"></p>
+            <form id="mcForm" onsubmit="submitMoncashConfirm(event)" novalidate>
+                <div class="form-row">
+                    <div class="form-group"><label for="mcName">Nom du client *</label><input type="text" id="mcName" class="form-control" autocomplete="name"></div>
+                    <div class="form-group"><label for="mcPhone">Téléphone ayant effectué le transfert *</label><input type="tel" id="mcPhone" class="form-control" inputmode="tel" placeholder="Ex : 3456 7890"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label for="mcOrder">Numéro de commande</label><input type="text" id="mcOrder" class="form-control" readonly></div>
+                    <div class="form-group"><label for="mcAmount">Montant envoyé (HTG) *</label><input type="number" id="mcAmount" class="form-control" min="1" step="1" inputmode="numeric"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label for="mcRef">Référence de la transaction MonCash *</label><input type="text" id="mcRef" class="form-control" maxlength="30" autocomplete="off" placeholder="Ex : 12874820"></div>
+                    <div class="form-group"><label for="mcDate">Date du transfert *</label><input type="date" id="mcDate" class="form-control"></div>
+                </div>
+                <div class="form-group"><label for="mcFile">Capture d'écran du reçu (facultative)</label><input type="file" id="mcFile" class="form-control" accept="image/png,image/jpeg,image/webp"></div>
+                <p id="mcError" class="mm-error" style="display:none;"></p>
+                <button type="submit" class="btn btn-primary" id="mcSubmitBtn" style="width:100%;">Soumettre ma confirmation de paiement</button>
+            </form>
+            <div id="mcSuccess" class="mc-success" style="display:none;">
+                <i class="fa-solid fa-circle-check"></i> Votre confirmation de paiement a été envoyée avec succès. Votre commande est en attente de vérification par notre équipe. Merci d'avoir choisi Délice de Jonathan !
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ADMINISTRATION : VÉRIFICATION DES PAIEMENTS ===== -->
+    <div class="modal-overlay" id="adminModal">
+        <div class="modal-content" style="max-width:860px;">
+            <button class="modal-close" onclick="closeModal('adminModal')">&times;</button>
+            <h2 class="section-title" style="font-size:1.8rem;">Administration — Paiements</h2>
+            <div id="adminBody"></div>
+        </div>
+    </div>
+
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
         <img id="lightboxImg" src="" alt="Enlarged gallery photo">
     </div>
 
-    <script src="script.js"></script>
+    <script>
+// Si le serveur est sur une autre adresse : window.MONCASH_API_BASE = 'https://votre-serveur.com';
+/* --- DONNÉE DU CATALOGUE PRODUITS --- */
+const productsData = [
+    { id: 1, name: "Gâteau au Chocolat", category: "gateaux", price: 2000, desc: "Chocolat noir fondant et ganache au cacao pur.", img: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80", stock: true },
+    { id: 2, name: "Red Velvet", category: "gateaux", price: 2500, desc: "Gâteau moelleux rouge vif avec crème au fromage doux.", img: "https://images.unsplash.com/photo-1586788680434-30d324b2d46f?auto=format&fit=crop&w=500&q=80", stock: true },
+    { id: 3, name: "Cheesecake", category: "gateaux", price: 2300, desc: "Onctueux cheesecake new-yorkais sur lit d'amandes.", img: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=500&q=80", stock: true },
+    { id: 4, name: "Cupcake Vanille", category: "cupcakes", price: 300, desc: "Petit gâteau vanille Bourbon avec son topping crémeux.", img: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=500&q=80", stock: true },
+    { id: 5, name: "Tarte aux Fraises", category: "tartes", price: 1600, desc: "Fraises fraîches de saison sur crème pâtissière légère.", img: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=500&q=80", stock: true },
+    { id: 6, name: "Croissant au Beurre", category: "viennoiseries", price: 200, desc: "Feuilletage artisanal pur beurre AOP d'Echiré.", img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80", stock: true },
+    { id: 7, name: "Donut Glacé Chocolat", category: "donuts", price: 250, desc: "Donut ultra mœlleux avec glaçage gourmand.", img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=500&q=80", stock: true },
+    { id: 8, name: "Cookies Pépites Chocolat", category: "biscuits", price: 150, desc: "Biscuit croustillant au cœur fondant et pépites XL.", img: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&q=80", stock: true }
+];
+
+/* Libellés lisibles des catégories (utilisés dans la recherche et la fiche produit) */
+const CATEGORY_LABELS = {
+    gateaux: "🎂 Gâteaux",
+    cupcakes: "🧁 Cupcakes",
+    biscuits: "🍪 Biscuits",
+    viennoiseries: "🥐 Viennoiseries",
+    donuts: "🍩 Donuts",
+    tartes: "🍰 Tartes"
+};
+
+/* ========================================================= */
+/* --- ZONES DE LIVRAISON (facilement modifiable ici) ---     */
+/* Ajoutez / modifiez une zone en ajoutant une ligne au format : */
+/* { name: "Nom affiché", fee: fraisEnGourdes }                */
+/* ========================================================= */
+const DELIVERY_ZONES = [
+    { name: "Delmas", fee: 200 },
+    { name: "Pétion-Ville", fee: 250 },
+    { name: "Port-au-Prince (centre)", fee: 300 },
+    { name: "Tabarre", fee: 300 },
+    { name: "Carrefour", fee: 400 },
+    { name: "Croix-des-Bouquets", fee: 500 },
+    { name: "Kenscoff / Laboule", fee: 500 },
+    { name: "Autre ville d'Haïti (à confirmer)", fee: 800 }
+];
+
+/* --- FORMAT DES PRIX : gourdes haïtiennes (HTG) --- */
+const fmtHTG = (n) => Number(n).toLocaleString('fr-FR') + ' HTG';
+
+/* --- ÉTAT DU PANIER (LOCALSTORAGE) --- */
+let cart = JSON.parse(localStorage.getItem('delices_cart_htg')) || [];
+
+/* --- ÉTAT DE LA RECHERCHE / FILTRE PRODUITS --- */
+let currentSearchTerm = '';
+let currentCategoryFilter = 'all';
+
+/* --- ÉTAT DE LA FICHE PRODUIT DÉTAILLÉE --- */
+let currentDetailProduct = null;
+let currentDetailQty = 1;
+
+/* --- ÉTAT DU PROCESSUS DE COMMANDE --- */
+let selectedDeliveryMode = 'domicile';
+let selectedPaymentMethod = 'MonCash';   // seul mode de paiement : transfert MonCash
+
+/* --- INITIALISATION & LOGIQUE DU PANIER --- */
+document.addEventListener('DOMContentLoaded', () => {
+    renderProducts(productsData);
+    updateCartUI();
+    populateDeliveryZones();
+
+    // Filtrage des produits (combiné avec la recherche)
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentCategoryFilter = btn.dataset.filter;
+            applyProductFilters();
+        });
+    });
+
+    // Barre de recherche produits
+    const searchInput = id('productSearchInput');
+    const searchClearBtn = id('searchClearBtn');
+    searchInput.addEventListener('input', () => {
+        currentSearchTerm = searchInput.value.trim().toLowerCase();
+        searchClearBtn.classList.toggle('visible', currentSearchTerm.length > 0);
+        applyProductFilters();
+    });
+    searchClearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        currentSearchTerm = '';
+        searchClearBtn.classList.remove('visible');
+        applyProductFilters();
+        searchInput.focus();
+    });
+
+    // Navigation Mobile
+    const hamburger = id('hamburgerBtn');
+    const navLinks = id('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+
+    // Fermer le menu mobile lors d'un clic sur un lien
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+
+    // Sidebar du panier
+    id('openCartBtn').addEventListener('click', () => id('cartSidebar').classList.add('open'));
+    id('closeCartBtn').addEventListener('click', () => id('cartSidebar').classList.remove('open'));
+    id('clearCartBtn').addEventListener('click', clearCart);
+
+    // Trigger Modal Commande
+    id('checkoutBtn').addEventListener('click', () => {
+        if(cart.length === 0) return alert('Votre panier est vide !');
+        id('cartSidebar').classList.remove('open');
+        goToCheckoutStep(1);
+        openModal('checkoutModal');
+    });
+
+    // Trigger Modal Custom
+    id('openCustomModalBtn').addEventListener('click', () => openModal('customModal'));
+
+    // Fiche produit détaillée : ouverture/fermeture
+    id('pdQtyMinus').addEventListener('click', () => updateDetailQty(-1));
+    id('pdQtyPlus').addEventListener('click', () => updateDetailQty(1));
+    id('pdAddToCartBtn').addEventListener('click', addDetailProductToCart);
+
+    // Fermeture des modales en cliquant à l'extérieur
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeModal(overlay.id);
+        });
+    });
+    // Fermeture des modales avec la touche Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay.open').forEach(overlay => closeModal(overlay.id));
+        }
+    });
+
+    // Mode de livraison (domicile / retrait)
+    document.querySelectorAll('#deliveryModeOptions .radio-card').forEach(card => {
+        card.addEventListener('click', () => {
+            document.querySelectorAll('#deliveryModeOptions .radio-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            card.querySelector('input').checked = true;
+            selectedDeliveryMode = card.dataset.mode;
+            id('deliveryAddressFields').style.display = selectedDeliveryMode === 'retrait' ? 'none' : '';
+            id('orderAddress').required = selectedDeliveryMode !== 'retrait';
+            id('orderZone').required = selectedDeliveryMode !== 'retrait';
+        });
+    });
+
+    // Suivi de commande
+    id('trackOrderBtn').addEventListener('click', trackOrder);
+    id('trackingInput').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') { e.preventDefault(); trackOrder(); }
+    });
+
+    // Slider Témoignages
+    startTestimonialSlider();
+});
+
+function id(elementId) { return document.getElementById(elementId); }
+
+/* --- AFFICHAGE PRODUITS --- */
+function renderProducts(products) {
+    const grid = id('productGrid');
+    grid.innerHTML = '';
+
+    if (products.length === 0) {
+        grid.innerHTML = `
+            <div class="no-results-msg">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Aucun produit trouvé.
+            </div>
+        `;
+        return;
+    }
+
+    products.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'product-card clickable';
+        card.onclick = () => openProductDetail(p.id);
+        card.innerHTML = `
+            <img src="${p.img}" class="product-img" alt="${p.name} — pâtisserie artisanale Délices de Jonathan">
+            <div class="product-info">
+                <h3 class="product-title">${p.name}</h3>
+                <p class="product-desc">${p.desc}</p>
+                <div class="product-footer">
+                    <span class="product-price">${fmtHTG(p.price)}</span>
+                    <button class="btn btn-primary" onclick="event.stopPropagation(); addToCart('${p.id}', '${p.name.replace(/'/g, "\\'")}', ${p.price})">Ajouter</button>
+                </div>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+/* --- RECHERCHE ET FILTRAGE COMBINÉS --- */
+function applyProductFilters() {
+    const filtered = productsData.filter(p => {
+        const matchCategory = (currentCategoryFilter === 'all') || (p.category === currentCategoryFilter);
+        const categoryLabel = CATEGORY_LABELS[p.category] || '';
+        const matchSearch = !currentSearchTerm || 
+            p.name.toLowerCase().includes(currentSearchTerm) ||
+            p.desc.toLowerCase().includes(currentSearchTerm) ||
+            categoryLabel.toLowerCase().includes(currentSearchTerm);
+        return matchCategory && matchSearch;
+    });
+    renderProducts(filtered);
+}
+
+/* --- FICHE PRODUIT DÉTAILLÉE --- */
+function openProductDetail(productId) {
+    const prod = productsData.find(p => p.id === productId);
+    if (!prod) return;
+    currentDetailProduct = prod;
+    currentDetailQty = 1;
+
+    id('pdImg').src = prod.img;
+    id('pdImg').alt = prod.name;
+    id('pdCategory').textContent = CATEGORY_LABELS[prod.category] || prod.category;
+    id('pdName').textContent = prod.name;
+    id('pdDesc').textContent = prod.desc;
+    id('pdPrice').textContent = `${fmtHTG(prod.price)}`;
+    id('pdQty').textContent = currentDetailQty;
+
+    openModal('productDetailModal');
+}
+
+function updateDetailQty(delta) {
+    currentDetailQty = Math.max(1, currentDetailQty + delta);
+    id('pdQty').textContent = currentDetailQty;
+}
+
+function addDetailProductToCart() {
+    if (!currentDetailProduct) return;
+    for (let i = 0; i < currentDetailQty; i++) {
+        addToCart(currentDetailProduct.id, currentDetailProduct.name, currentDetailProduct.price, false);
+    }
+    closeModal('productDetailModal');
+    id('cartSidebar').classList.add('open');
+}
+
+/* --- LOGIQUE DE GESTION DU PANIER --- */
+function addToCart(idParam, title, price, showSidebar = true) {
+    const existing = cart.find(item => item.id == idParam);
+    if (existing) {
+        existing.qty++;
+    } else {
+        cart.push({ id: idParam, title: title, price: Number(price), qty: 1 });
+    }
+    saveAndRefreshCart();
+    if (showSidebar) id('cartSidebar').classList.add('open');
+}
+
+function updateQty(idParam, delta) {
+    const item = cart.find(i => i.id == idParam);
+    if (!item) return;
+    item.qty += delta;
+    if (item.qty <= 0) {
+        cart = cart.filter(i => i.id != idParam);
+    }
+    saveAndRefreshCart();
+}
+
+function clearCart() {
+    cart = [];
+    saveAndRefreshCart();
+}
+
+function saveAndRefreshCart() {
+    localStorage.setItem('delices_cart_htg', JSON.stringify(cart));
+    updateCartUI();
+}
+
+function updateCartUI() {
+    const cartItemsContainer = id('cartItems');
+    const cartCountEl = id('cartCount');
+    const cartTotalEl = id('cartTotalAmount');
+
+    cartItemsContainer.innerHTML = '';
+    let total = 0;
+    let count = 0;
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p style="text-align:center; color:var(--text-muted); margin-top:30px;">Votre panier est vide 🍰</p>';
+    } else {
+        cart.forEach(item => {
+            total += item.price * item.qty;
+            count += item.qty;
+
+            const div = document.createElement('div');
+            div.className = 'cart-item';
+            div.innerHTML = `
+                <div class="cart-item-details">
+                    <div class="cart-item-title">${item.title}</div>
+                    <div style="font-size:0.85rem; color:var(--text-muted);">${fmtHTG(item.price)} x ${item.qty}</div>
+                    <div class="cart-item-qty">
+                        <button class="qty-btn" onclick="updateQty('${item.id}', -1)">-</button>
+                        <span>${item.qty}</span>
+                        <button class="qty-btn" onclick="updateQty('${item.id}', 1)">+</button>
+                    </div>
+                </div>
+                <div style="font-weight:600;">${fmtHTG(item.price * item.qty)}</div>
+            `;
+            cartItemsContainer.appendChild(div);
+        });
+    }
+
+    cartCountEl.textContent = count;
+    cartTotalEl.textContent = `${fmtHTG(total)}`;
+}
+
+/* --- ZONES DE LIVRAISON --- */
+function populateDeliveryZones() {
+    const select = id('orderZone');
+    if(!select) return;
+    select.innerHTML = '<option value="">-- Sélectionnez une zone --</option>';
+    DELIVERY_ZONES.forEach(z => {
+        const opt = document.createElement('option');
+        opt.value = z.name;
+        opt.dataset.fee = z.fee;
+        opt.textContent = `${z.name} (+${fmtHTG(z.fee)})`;
+        select.appendChild(opt);
+    });
+    select.addEventListener('change', updateCheckoutSummary);
+}
+
+/* --- PROCESSUS DE COMMANDE ET STEPPER --- */
+function goToCheckoutStep(stepNumber) {
+    if (stepNumber === 2) {
+        const form = id('checkoutForm');
+        if (selectedDeliveryMode === 'domicile') {
+            if (!id('orderName').value.trim() || !id('orderPhone').value.trim() || !id('orderAddress').value.trim() || !id('orderZone').value || !id('orderDate').value || !id('orderTime').value) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+        } else {
+            if (!id('orderName').value.trim() || !id('orderPhone').value.trim() || !id('orderDate').value || !id('orderTime').value) {
+                alert('Veuillez remplir votre nom, téléphone, date et heure de retrait.');
+                return;
+            }
+        }
+        updateCheckoutSummary();
+    }
+
+    id('checkoutStep1').classList.toggle('active', stepNumber === 1);
+    id('checkoutStep2').classList.toggle('active', stepNumber === 2);
+    id('stepDot1').classList.toggle('active', stepNumber === 1);
+    id('stepDot2').classList.toggle('active', stepNumber === 2);
+}
+
+function updateCheckoutSummary() {
+    const itemsContainer = id('checkoutSummaryItems');
+    itemsContainer.innerHTML = '';
+    let subtotal = 0;
+
+    cart.forEach(item => {
+        subtotal += item.price * item.qty;
+        const row = document.createElement('div');
+        row.innerHTML = `<span>${item.title} (x${item.qty})</span><span>${fmtHTG(item.price * item.qty)}</span>`;
+        itemsContainer.appendChild(row);
+    });
+
+    let deliveryFee = 0;
+    if (selectedDeliveryMode === 'domicile') {
+        const zoneSelect = id('orderZone');
+        const selectedOpt = zoneSelect.options[zoneSelect.selectedIndex];
+        if (selectedOpt && selectedOpt.dataset.fee) {
+            deliveryFee = Number(selectedOpt.dataset.fee);
+        }
+    }
+
+    id('summarySubtotal').textContent = `${fmtHTG(subtotal)}`;
+    id('summaryDeliveryFee').textContent = selectedDeliveryMode === 'retrait' ? '0 HTG (Retrait)' : `${fmtHTG(deliveryFee)}`;
+    id('summaryTotal').textContent = `${fmtHTG(subtotal + deliveryFee)}`;
+    updateMoncashBox();
+}
+
+/* --- TOTAL DE LA COMMANDE EN COURS --- */
+function getCheckoutTotals() {
+    const subtotal = cart.reduce((s, i) => s + (i.price * i.qty), 0);
+    let deliveryFee = 0;
+    if (selectedDeliveryMode === 'domicile') {
+        const zoneSelect = id('orderZone');
+        const selectedOpt = zoneSelect.options[zoneSelect.selectedIndex];
+        if (selectedOpt && selectedOpt.dataset.fee) deliveryFee = Number(selectedOpt.dataset.fee);
+    }
+    return { subtotal, deliveryFee, total: subtotal + deliveryFee };
+}
+
+/* Numéro haïtien : 8 chiffres, avec ou sans l'indicatif 509 */
+function normalizeHaitiPhone(raw) {
+    const digits = String(raw || '').replace(/\D/g, '');
+    if (/^509\d{8}$/.test(digits)) return digits;
+    if (/^\d{8}$/.test(digits)) return '509' + digits;
+    return null;
+}
+
+let orderInFlight = false;
+async function processOrder() {
+    if (orderInFlight) return;            // anti double-clic
+    orderInFlight = true;
+    try { await _processOrder(); } finally { orderInFlight = false; }
+}
+
+async function _processOrder(method) {
+    const orderNum = getPendingOrderNum();
+    pendingOrderNum = null;
+    const subtotal = cart.reduce((s, i) => s + (i.price * i.qty), 0);
+    
+    let deliveryFee = 0;
+    if (selectedDeliveryMode === 'domicile') {
+        const zoneSelect = id('orderZone');
+        const selectedOpt = zoneSelect.options[zoneSelect.selectedIndex];
+        if (selectedOpt && selectedOpt.dataset.fee) deliveryFee = Number(selectedOpt.dataset.fee);
+    }
+
+    const orderDetails = {
+        number: orderNum,
+        date: new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
+        clientName: id('orderName').value.trim(),
+        phone: id('orderPhone').value.trim(),
+        email: id('orderEmail').value.trim(),
+        mode: selectedDeliveryMode,
+        address: selectedDeliveryMode === 'domicile' ? id('orderAddress').value.trim() : 'Retrait en boutique',
+        zone: selectedDeliveryMode === 'domicile' ? id('orderZone').value : 'N/A',
+        desiredDate: id('orderDate').value,
+        desiredTime: id('orderTime').value,
+        instructions: id('orderInstructions').value.trim(),
+        comment: id('orderComment').value.trim(),
+        items: [...cart],
+        subtotal: subtotal,
+        deliveryFee: deliveryFee,
+        total: subtotal + deliveryFee,
+        paymentMethod: selectedPaymentMethod,
+        paymentStatus: 'en_attente_paiement',
+        paymentDetails: null,
+        status: 'enregistree'
+    };
+    if (selectedPaymentMethod === 'MonCash') {
+        orderDetails.paymentStatus = 'en_attente_paiement';
+        if (method === 'direct') orderDetails.paymentStatus = 'paiement_en_cours';
+        orderDetails.moncash = { confirmations: [], history: [{ at: nowStr(), action: 'en_attente_paiement', by: 'client', note: 'Commande créée' }] };
+    }
+
+    let ordersHistory = JSON.parse(localStorage.getItem('delices_orders_htg')) || [];
+    ordersHistory.push(orderDetails);
+    localStorage.setItem('delices_orders_htg', JSON.stringify(ordersHistory));
+
+    closeModal('checkoutModal');
+    clearCart();
+    if (method === 'direct') return;
+    showOrderConfirmation(orderDetails);
+}
+
+function paymentStatusLabel(order) {
+    if (PAY_STATUS[order.paymentStatus] && order.paymentMethod === 'MonCash') return PAY_STATUS[order.paymentStatus] + (order.paymentStatus === 'paiement_refuse' ? ' — vous pouvez renvoyer une confirmation' : '');
+    if (order.paymentStatus === 'paye') return 'Paiement vérifié ✔';
+    if (order.paymentStatus === 'en_attente_verification') return `En attente de vérification (code ${order.paymentDetails.code})`;
+    return 'À régler';
+}
+
+function showOrderConfirmation(order) {
+    id('confirmOrderNumber').textContent = order.number;
+
+    let itemsHtml = order.items.map(i => `<div class="order-confirm-detail-row"><span>${i.title} x ${i.qty}</span><span>${fmtHTG(i.price * i.qty)}</span></div>`).join('');
+
+    id('confirmOrderDetails').innerHTML = `
+        <div style="margin-bottom:15px; font-size:0.9rem; color:var(--text-muted);">
+            <strong>Client :</strong> ${order.clientName} (${order.phone})<br>
+            <strong>Mode :</strong> ${order.mode === 'domicile' ? 'Livraison à domicile' : 'Retrait sur place'}<br>
+            ${order.mode === 'domicile' ? `<strong>Adresse :</strong> ${order.address} (${order.zone})<br>` : ''}
+            <strong>Date souhaitée :</strong> ${order.desiredDate} à ${order.desiredTime}<br>
+            <strong>Mode de paiement :</strong> ${order.paymentMethod}<br>
+            <strong>Statut du paiement :</strong> ${paymentStatusLabel(order)}
+        </div>
+        <div style="background:#fdf6f0; border-radius:10px; padding:12px; margin-bottom:15px;">
+            ${itemsHtml}
+            <div class="order-confirm-detail-row" style="font-weight:700; border-top:1px solid #e5d9d0; margin-top:8px; padding-top:8px;">
+                <span>Total réglé / à régler</span>
+                <span>${fmtHTG(order.total)}</span>
+            </div>
+        </div>
+    `;
+
+    if (order.paymentMethod === 'MonCash') id('confirmOrderDetails').insertAdjacentHTML('beforeend', moncashCardHTML(order.number, order.total) + moncashActionBtn(order));
+    openModal('orderConfirmationModal');
+}
+
+/* --- SUIVI DE COMMANDE --- */
+function trackOrder() {
+    const inputVal = id('trackingInput').value.trim().toUpperCase();
+    const notFoundEl = id('trackingNotFound');
+    const resultEl = id('trackingResult');
+
+    notFoundEl.classList.remove('visible');
+    resultEl.classList.remove('visible');
+
+    if (!inputVal) return alert('Veuillez saisir un numéro de commande.');
+
+    const ordersHistory = JSON.parse(localStorage.getItem('delices_orders_htg')) || [];
+    const found = ordersHistory.find(o => o.number.toUpperCase() === inputVal);
+
+    if (!found) {
+        notFoundEl.classList.add('visible');
+        return;
+    }
+
+    id('trackingOrderSummary').innerHTML = `
+        <strong>Commande :</strong> ${found.number}<br>
+        <strong>Client :</strong> ${found.clientName}<br>
+        <strong>Date de commande :</strong> ${found.date}<br>
+        <strong>Montant total :</strong> ${fmtHTG(found.total)} (${found.paymentMethod})<br>
+        <strong>Paiement :</strong> ${paymentStatusLabel(found)}${moncashActionBtn(found)}
+    `;
+
+    const steps = [
+        { key: 'enregistree', label: 'Commande enregistrée', icon: 'fa-file-lines' },
+        { key: 'preparation', label: 'En cours de préparation en atelier', icon: 'fa-kitchen-set' },
+        { key: 'livraison', label: 'En cours de livraison / Prête au retrait', icon: 'fa-truck-fast' },
+        { key: 'livree', label: 'Livrée / Retirée', icon: 'fa-circle-check' }
+    ];
+
+    const progressList = id('trackingProgressList');
+    progressList.innerHTML = '';
+
+    steps.forEach((s, idx) => {
+        const li = document.createElement('li');
+        li.className = 'done'; 
+        li.innerHTML = `
+            <div class="tracking-step-icon"><i class="fa-solid ${s.icon}"></i></div>
+            <div class="tracking-step-label">${s.label}</div>
+        `;
+        progressList.appendChild(li);
+    });
+
+    resultEl.classList.add('visible');
+}
+
+/* ========================================================= */
+/* --- MONCASH : TRANSFERT MANUEL (sans API marchande) ---    */
+/* Pour ajouter l'API plus tard : passer apiEnabled à true et  */
+/* brancher le fournisseur dans moncashCardHTML / adminDecide.  */
+/* logoUrl : placez ici l'URL/chemin du logo officiel MonCash.  */
+/* ========================================================= */
+const MONCASH = { name: 'JONATHAN MARSEILLE', number: '(509) 31969773', copyNumber: '31969773', currency: 'HTG', logoUrl: '', apiEnabled: false };
+const LS_ORD = 'delices_orders_htg', LS_REC = 'delices_receipts_htg', LS_LOG = 'delices_admin_log', LS_ADM = 'delices_admin_auth';
+const PAY_STATUS = { en_attente_paiement: 'En attente de paiement', confirmation_envoyee: 'Confirmation envoyée', en_attente_verification: 'En attente de vérification', paiement_confirme: 'Paiement confirmé', paiement_refuse: 'Paiement refusé', annulee: 'Commande annulée' };
+/* Couche de stockage : à remplacer par des appels serveur (voir notes de livraison) */
+const lsGet = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } };
+const lsSet = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } };
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const nowStr = () => new Date().toISOString();
+const fmtDT = (iso) => new Date(iso).toLocaleString('fr-FR');
+
+let pendingOrderNum = null;
+function getPendingOrderNum() {
+    if (!pendingOrderNum) {
+        const used = new Set(lsGet(LS_ORD, []).map(o => o.number));
+        do { pendingOrderNum = `CMD-${new Date().toISOString().slice(0,10).replace(/-/g,'')}-${Math.floor(1000 + Math.random() * 9000)}`; } while (used.has(pendingOrderNum));
+    }
+    return pendingOrderNum;
+}
+
+function copyText(text, btn) {
+    const done = () => { const old = btn.innerHTML; btn.classList.add('copied'); btn.innerHTML = '<i class="fa-solid fa-check"></i> Copié !'; setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = old; }, 1800); };
+    const fallback = () => { const t = document.createElement('textarea'); t.value = text; t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done(); } catch (e) { prompt('Copiez manuellement :', text); } t.remove(); };
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(String(text)).then(done, fallback); else fallback();
+}
+
+function moncashCardHTML(num, total) {
+    const logo = MONCASH.logoUrl ? `<img src="${esc(MONCASH.logoUrl)}" alt="MonCash" class="mc-logo-img">` : '<span class="mc-logo">Mon<b>Cash</b></span>';
+    const steps = ["Ouvrir l'application MonCash.", "Choisir l'option d'envoi ou de transfert d'argent.", `Entrer le numéro du bénéficiaire : <strong>${MONCASH.number}</strong>.`, `Vérifier le nom du destinataire : <strong>${MONCASH.name}</strong>.`, `Saisir le montant exact indiqué sur la commande : <strong>${fmtHTG(total)}</strong>.`, 'Vérifier les informations avant de confirmer.', 'Entrer son code PIN personnel dans l\'application MonCash.', 'Confirmer le transfert.', 'Conserver le reçu et la référence de transaction.', 'Revenir sur le site Délice de Jonathan pour confirmer le paiement.'];
+    return `<div class="mc-card">
+        <div class="mc-head">${logo}<h4>Paiement par transfert MonCash</h4></div>
+        <div class="mc-row"><span>Bénéficiaire</span><strong>${MONCASH.name}</strong></div>
+        <div class="mc-row"><span>Numéro MonCash</span><strong>${MONCASH.number}</strong><button type="button" class="mc-copy" data-copy="number" onclick="copyText('${MONCASH.copyNumber}', this)"><i class="fa-regular fa-copy"></i> Copier le numéro</button></div>
+        <div class="mc-row"><span>Montant exact</span><strong>${fmtHTG(total)}</strong><button type="button" class="mc-copy" data-copy="amount" onclick="copyText('${Number(total)}', this)"><i class="fa-regular fa-copy"></i> Copier le montant</button></div>
+        <div class="mc-row"><span>N° de commande</span><strong>${esc(num)}</strong></div>
+        <ol class="mc-steps">${steps.map(s => `<li><span>${s}</span></li>`).join('')}</ol>
+        <p class="mc-pin"><i class="fa-solid fa-lock"></i> Ne communiquez jamais votre code PIN MonCash : il ne vous sera jamais demandé sur ce site.</p>
+    </div>`;
+}
+
+let mcMethod = 'direct';
+function selectMcMethod(m) { mcMethod = m; updateMoncashBox(); }
+function updateMoncashBox() {
+    const box = id('moncashBox'), btn = id('confirmPaymentBtn');
+    if (!box) return;
+    const total = getCheckoutTotals().total;
+    const opt = (m, t, d) => `<label class="mc-opt ${mcMethod === m ? 'sel' : ''}" onclick="selectMcMethod('${m}')"><input type="radio" name="mcm" ${mcMethod === m ? 'checked' : ''}><span><strong>${t}</strong><small>${d}</small></span></label>`;
+    let h = '<div class="mc-pay-head"><span class="mc-logo">Mon<b>Cash</b></span><span>Payer avec MonCash</span><i class="fa-solid fa-circle-check"></i></div>'
+        + opt('direct', 'Paiement direct MonCash', 'Redirection sécurisée vers la page officielle MonCash')
+        + opt('manual', 'Transfert manuel MonCash', 'Envoyez l\'argent depuis votre application, puis confirmez');
+    if (mcMethod === 'direct') {
+        h += `<div class="mc-direct"><p>Montant à payer : <strong>${fmtHTG(total)}</strong></p><p class="mc-note">Vous serez redirigé vers MonCash pour autoriser la transaction. La commande n'est marquée payée qu'après vérification auprès de MonCash.</p></div>`;
+        btn.textContent = 'Continuer avec MonCash';
+    } else {
+        h += moncashCardHTML(getPendingOrderNum(), total) + '<p class="mc-note">Une fois la commande passée, vous pourrez soumettre votre confirmation de transfert. La commande n\'est considérée payée qu\'après vérification par notre équipe.</p>';
+        btn.textContent = 'Passer la commande';
+    }
+    box.style.display = 'block'; box.innerHTML = h;
+}
+function onPayClick() { return mcMethod === 'direct' ? startMoncashDirect() : processOrder(); }
+async function startMoncashDirect() {
+    const btn = id('confirmPaymentBtn');
+    if (orderInFlight) return; orderInFlight = true;
+    const old = btn.textContent; btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Initialisation du paiement…';
+    try {
+        const orderNum = getPendingOrderNum(), total = getCheckoutTotals().total;
+        if (location.protocol === 'file:' && !window.MONCASH_API_BASE) throw new Error("le site est ouvert depuis un fichier. Lancez le serveur (npm start) puis ouvrez http://localhost:3000");
+        const r = await fetch((window.MONCASH_API_BASE || '') + '/api/moncash/create', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ orderId: orderNum, amount: total }) });
+        const d = await r.json();
+        if (!r.ok || !d.redirectUrl) throw new Error(d.error || 'Paiement indisponible');
+        await _processOrder('direct');
+        window.location.href = d.redirectUrl;
+    } catch (e) { alert('Impossible de démarrer le paiement MonCash : ' + (e instanceof TypeError ? "serveur injoignable. Vérifiez que le serveur Node est lancé et que le site est ouvert via son adresse (ex. http://localhost:3000)." : e.message)); btn.disabled = false; btn.textContent = old; orderInFlight = false; }
+}
+
+function moncashActionBtn(o) {
+    return (o.paymentMethod === 'MonCash' && ['en_attente_paiement', 'paiement_refuse'].includes(o.paymentStatus))
+        ? `<button type="button" class="btn btn-primary mc-cta" onclick="openMoncashConfirm('${esc(o.number)}')">J'ai effectué mon transfert — confirmer mon paiement</button>` : '';
+}
+
+function openMoncashConfirm(num) {
+    const o = lsGet(LS_ORD, []).find(x => x.number === num);
+    if (!o || o.paymentMethod !== 'MonCash') return alert('Commande MonCash introuvable.');
+    if (!['en_attente_paiement', 'paiement_refuse'].includes(o.paymentStatus)) return alert('Une confirmation est déjà en cours de vérification ou la commande est déjà traitée.');
+    id('mcForm').reset(); id('mcForm').style.display = ''; id('mcSuccess').style.display = 'none'; id('mcError').style.display = 'none';
+    id('mcName').value = o.clientName; id('mcPhone').value = o.phone; id('mcOrder').value = o.number;
+    id('mcDate').max = new Date().toISOString().slice(0, 10);
+    const last = (o.moncash && o.moncash.history || []).filter(h => h.action === 'paiement_refuse').pop();
+    const rn = id('mcRefusedNote');
+    rn.style.display = last ? 'block' : 'none';
+    if (last) rn.textContent = 'Votre précédente confirmation a été refusée. Motif : ' + last.note;
+    closeModal('orderConfirmationModal'); closeModal('checkoutModal');
+    openModal('moncashConfirmModal');
+}
+
+/* Réduit la capture pour tenir dans le stockage du navigateur */
+function compressImage(file) {
+    return new Promise((resolve, reject) => {
+        const fr = new FileReader();
+        fr.onerror = () => reject(new Error('lecture'));
+        fr.onload = () => {
+            const raw = fr.result; let settled = false;
+            const fin = (v) => { if (!settled) { settled = true; v ? resolve(v) : (raw.length < 1.2e6 ? resolve(raw) : reject(new Error('trop gros'))); } };
+            const img = new Image();
+            img.onload = () => { try { const s = Math.min(1, 1100 / Math.max(img.width, img.height)); const c = document.createElement('canvas'); c.width = Math.round(img.width * s); c.height = Math.round(img.height * s); c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); fin(c.toDataURL('image/jpeg', 0.72)); } catch (e) { fin(null); } };
+            img.onerror = () => fin(null);
+            setTimeout(() => fin(null), 4000);
+            img.src = raw;
+        };
+        fr.readAsDataURL(file);
+    });
+}
+
+let mcBusy = false;
+async function submitMoncashConfirm(e) {
+    e.preventDefault();
+    if (mcBusy) return;                                   // anti double-soumission
+    const err = (m) => { const x = id('mcError'); x.textContent = m; x.style.display = 'block'; x.scrollIntoView({ behavior: 'smooth', block: 'center' }); };
+    id('mcError').style.display = 'none';
+    const num = id('mcOrder').value, name = id('mcName').value.trim(), phone = normalizeHaitiPhone(id('mcPhone').value);
+    const amount = Number(id('mcAmount').value), ref = id('mcRef').value.trim(), date = id('mcDate').value, file = id('mcFile').files[0];
+    const orders = lsGet(LS_ORD, []), o = orders.find(x => x.number === num);
+    if (!o || o.paymentMethod !== 'MonCash') return err('Commande MonCash introuvable.');
+    if (!['en_attente_paiement', 'paiement_refuse'].includes(o.paymentStatus)) return err('Une confirmation est déjà en cours de vérification ou cette commande est déjà traitée.');
+    if (name.length < 2) return err('Veuillez saisir votre nom.');
+    if (!phone) return err('Numéro de téléphone invalide : saisissez 8 chiffres (ex : 3456 7890).');
+    if (!Number.isFinite(amount) || amount <= 0) return err('Veuillez saisir le montant envoyé.');
+    if (amount !== o.total) return err(`Le montant envoyé doit être exactement ${fmtHTG(o.total)} (montant de la commande).`);
+    if (!/^[A-Za-z0-9-]{4,30}$/.test(ref)) return err('Référence invalide : 4 à 30 caractères (lettres, chiffres ou tirets).');
+    if (orders.some(x => (x.moncash && x.moncash.confirmations || []).some(c => c.ref.toUpperCase() === ref.toUpperCase()))) return err('Cette référence de transaction a déjà été utilisée.');
+    if (!date || date > new Date().toISOString().slice(0, 10)) return err('Date du transfert invalide (elle ne peut pas être dans le futur).');
+    if (file && !/^image\/(jpeg|png|webp)$/.test(file.type)) return err('Le reçu doit être une image (JPG, PNG ou WEBP).');
+    if (file && file.size > 8 * 1024 * 1024) return err('Image trop lourde (8 Mo maximum).');
+
+    mcBusy = true; const btn = id('mcSubmitBtn'); btn.disabled = true; btn.classList.add('is-loading');
+    try {
+        let receipt = null;
+        if (file) { try { receipt = await compressImage(file); } catch (x) { return err('Impossible de traiter cette image. Essayez une capture plus légère ou envoyez sans reçu.'); } }
+        const fresh = lsGet(LS_ORD, []), fo = fresh.find(x => x.number === num);    // relecture : évite les doublons
+        if (!fo || !['en_attente_paiement', 'paiement_refuse'].includes(fo.paymentStatus)) return err('Une confirmation a déjà été envoyée pour cette commande.');
+        const recs = lsGet(LS_REC, {});
+        if (receipt) { recs[num] = receipt; if (!lsSet(LS_REC, recs)) return err('Espace de stockage insuffisant pour le reçu. Envoyez sans reçu ou avec une image plus légère.'); }
+        fo.moncash = fo.moncash || { confirmations: [], history: [] };
+        fo.moncash.confirmations.push({ at: nowStr(), name, phone, amount, ref, date, hasReceipt: !!receipt });
+        fo.moncash.history.push({ at: nowStr(), action: 'confirmation_envoyee', by: 'client', note: 'Réf. ' + ref });
+        fo.moncash.history.push({ at: nowStr(), action: 'en_attente_verification', by: 'système', note: '' });
+        fo.paymentStatus = 'en_attente_verification';
+        if (!lsSet(LS_ORD, fresh)) return err('Enregistrement impossible (stockage plein).');
+        id('mcForm').style.display = 'none'; id('mcRefusedNote').style.display = 'none'; id('mcSuccess').style.display = 'block';
+    } finally { mcBusy = false; btn.disabled = false; btn.classList.remove('is-loading'); }
+}
+
+/* ===== ADMINISTRATION ===== */
+/* ⚠ Protection côté navigateur uniquement : à doubler d'une authentification serveur en production. */
+let admTab = 'pending';
+const adminOK = () => sessionStorage.getItem('delices_admin_ok') === '1';
+async function sha256(s) { const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)); return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, '0')).join(''); }
+function adminLog(action, order, note) { const l = lsGet(LS_LOG, []); l.unshift({ at: nowStr(), action, order: order || '', note: note || '' }); lsSet(LS_LOG, l.slice(0, 500)); }
+function openAdmin() { openModal('adminModal'); renderAdmin(); }
+
+function renderAdmin() {
+    const root = id('adminBody');
+    if (!adminOK()) {
+        const first = !lsGet(LS_ADM, null);
+        root.innerHTML = `<p style="color:var(--text-muted); margin:8px 0 12px;">${first ? 'Première utilisation : créez votre mot de passe administrateur (8 caractères minimum).' : 'Accès réservé à l\'administrateur.'}</p>
+            <div class="form-group"><label for="admPw">Mot de passe</label><input type="password" id="admPw" class="form-control" autocomplete="${first ? 'new-password' : 'current-password'}"></div>
+            ${first ? '<div class="form-group"><label for="admPw2">Confirmer le mot de passe</label><input type="password" id="admPw2" class="form-control" autocomplete="new-password"></div>' : ''}
+            <p id="admMsg" class="mm-error" style="display:none;"></p>
+            <button type="button" class="btn btn-primary" style="width:100%;" onclick="adminLogin()">${first ? 'Créer et se connecter' : 'Se connecter'}</button>`;
+        return;
+    }
+    const all = lsGet(LS_ORD, []).filter(o => o.paymentMethod === 'MonCash').reverse();
+    const pend = all.filter(o => o.paymentStatus === 'en_attente_verification');
+    const tabs = [['pending', `À vérifier (${pend.length})`], ['all', `Commandes MonCash (${all.length})`], ['log', 'Historique']];
+    let body = '';
+    if (admTab === 'log') {
+        const log = lsGet(LS_LOG, []);
+        body = log.length ? log.map(l => `<div class="adm-order"><strong>${esc(l.action)}</strong> ${l.order ? '· ' + esc(l.order) : ''}<br><small>${fmtDT(l.at)}${l.note ? ' — ' + esc(l.note) : ''}</small></div>`).join('') : '<p>Aucune opération pour le moment.</p>';
+    } else {
+        const list = admTab === 'pending' ? pend : all;
+        body = list.length ? list.map(adminOrderHTML).join('') : '<p>Aucune commande à afficher.</p>';
+    }
+    root.innerHTML = `<div style="display:flex; justify-content:space-between; align-items:center; gap:8px;"><div class="adm-tabs">${tabs.map(t => `<button type="button" class="${admTab === t[0] ? 'active' : ''}" onclick="admTab='${t[0]}'; renderAdmin()">${t[1]}</button>`).join('')}</div><button type="button" class="adm-link" onclick="adminLogout()">Déconnexion</button></div>${body}`;
+}
+
+function adminOrderHTML(o) {
+    const conf = (o.moncash && o.moncash.confirmations || []).slice(-1)[0];
+    const rec = lsGet(LS_REC, {})[o.number];
+    const hist = (o.moncash && o.moncash.history || []).map(h => `<li>${fmtDT(h.at)} — ${esc(PAY_STATUS[h.action] || h.action)} (${esc(h.by)})${h.note ? ' : ' + esc(h.note) : ''}</li>`).join('');
+    const k = esc(o.number);
+    const decide = o.paymentStatus === 'en_attente_verification' ? `<div class="adm-actions"><button type="button" class="mc-btn-ok" onclick="adminDecide('${k}','confirm')">Confirmer le paiement</button><input type="text" id="admMotif_${k}" placeholder="Motif du refus (obligatoire pour refuser)" maxlength="200"><button type="button" class="mc-btn-no" onclick="adminDecide('${k}','refuse')">Refuser le paiement</button></div>` : '';
+    const cancel = !['paiement_confirme', 'annulee'].includes(o.paymentStatus) ? `<button type="button" class="adm-link" onclick="adminDecide('${k}','cancel')">Annuler la commande</button>` : '';
+    return `<div class="adm-order"><h4>${k} — ${fmtHTG(o.total)}</h4><span class="adm-badge">${esc(PAY_STATUS[o.paymentStatus] || o.paymentStatus)}</span><br>
+        Client : ${esc(o.clientName)} (${esc(o.phone)})<br>
+        ${conf ? `Transfert : ${esc(conf.name)} · ${esc(conf.phone)} · <strong>${fmtHTG(conf.amount)}</strong> · Réf. <strong>${esc(conf.ref)}</strong> · le ${esc(conf.date)}<br>` : 'Aucune confirmation reçue.<br>'}
+        ${rec ? `<div class="adm-receipt"><img src="${rec}" alt="Reçu ${k}"><a href="${rec}" download="recu-${k}.jpg">Télécharger le reçu</a></div>` : ''}
+        <details style="margin-top:6px;"><summary>Historique de la commande</summary><ul style="padding-left:18px;">${hist}</ul></details>${decide}${cancel}</div>`;
+}
+
+async function adminLogin() {
+    const msg = (t) => { const m = id('admMsg'); m.textContent = t; m.style.display = 'block'; };
+    const pw = id('admPw').value; let auth = lsGet(LS_ADM, null);
+    if (!auth) {
+        if (pw.length < 8) return msg('Mot de passe : 8 caractères minimum.');
+        if (pw !== id('admPw2').value) return msg('Les mots de passe ne correspondent pas.');
+        const salt = crypto.randomUUID();
+        auth = { salt, hash: await sha256(salt + pw), fails: 0, until: 0 };
+        lsSet(LS_ADM, auth); adminLog('Création du compte administrateur');
+    } else {
+        if (Date.now() < auth.until) return msg('Trop de tentatives. Réessayez dans quelques minutes.');
+        if (await sha256(auth.salt + pw) !== auth.hash) {
+            auth.fails++; if (auth.fails >= 5) { auth.until = Date.now() + 5 * 60000; auth.fails = 0; adminLog('Verrouillage temporaire (5 échecs)'); }
+            lsSet(LS_ADM, auth); return msg('Mot de passe incorrect.');
+        }
+        auth.fails = 0; lsSet(LS_ADM, auth);
+    }
+    sessionStorage.setItem('delices_admin_ok', '1'); adminLog('Connexion'); renderAdmin();
+}
+function adminLogout() { sessionStorage.removeItem('delices_admin_ok'); renderAdmin(); }
+
+function adminDecide(num, action) {
+    if (!adminOK()) return renderAdmin();
+    const orders = lsGet(LS_ORD, []), o = orders.find(x => x.number === num);
+    if (!o || o.paymentMethod !== 'MonCash') return renderAdmin();
+    let note = '', status;
+    if (action === 'cancel') {
+        if (['paiement_confirme', 'annulee'].includes(o.paymentStatus)) return renderAdmin();
+        if (!confirm('Annuler cette commande ?')) return;
+        status = 'annulee';
+    } else {
+        if (o.paymentStatus !== 'en_attente_verification') return renderAdmin();     // décision déjà prise
+        if (action === 'refuse') {
+            note = (id('admMotif_' + num).value || '').trim();
+            if (note.length < 3) return alert('Indiquez le motif du refus.');
+            status = 'paiement_refuse';
+        } else {
+            if (!confirm('Avez-vous vérifié ce transfert dans votre compte MonCash (montant, expéditeur, référence) ?')) return;
+            status = 'paiement_confirme';
+        }
+    }
+    o.paymentStatus = status;
+    o.moncash = o.moncash || { confirmations: [], history: [] };
+    o.moncash.history.push({ at: nowStr(), action: status, by: 'admin', note });
+    if (!lsSet(LS_ORD, orders)) return alert('Enregistrement impossible.');
+    adminLog(PAY_STATUS[status], num, note); renderAdmin();
+}
+
+function routeHash() { if (location.hash === '#admin') openAdmin(); }
+window.addEventListener('hashchange', routeHash);
+document.addEventListener('DOMContentLoaded', routeHash);
+
+/* --- IMPRESSION ET TÉLÉCHARGEMENT DE REÇU --- */
+function printReceipt() {
+    window.print();
+}
+
+function downloadReceipt() {
+    const receiptText = id('printableReceipt').innerText;
+    const blob = new Blob([receiptText], { type: 'text/plain;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `Recu-Delices-De-Jonathan.txt`;
+    link.click();
+}
+
+/* --- MODALES & LIGHTBOX --- */
+function openModal(modalId) {
+    const target = id(modalId);
+    if (target) target.classList.add('open');
+}
+
+function closeModal(modalId) {
+    const target = id(modalId);
+    if (target) target.classList.remove('open');
+}
+
+function openLightbox(src) {
+    id('lightboxImg').src = src;
+    id('lightbox').classList.add('open');
+}
+
+function closeLightbox() {
+    id('lightbox').classList.remove('open');
+}
+
+/* --- FORMULAIRES EXTERNES --- */
+function handleContactSubmit(e) {
+    e.preventDefault();
+    alert('Merci pour votre message ! Notre équipe vous répondra dans les plus brefs délais.');
+    id('contactForm').reset();
+}
+
+function handleCustomSubmit(e) {
+    e.preventDefault();
+    alert('Votre demande de gâteau sur-mesure a bien été transmise ! Nous prendrons contact avec vous très rapidement.');
+    id('customForm').reset();
+    closeModal('customModal');
+}
+
+/* --- SLIDER CARROUSEL AVIS --- */
+function startTestimonialSlider() {
+    const track = id('testimonialTrack');
+    if(!track) return;
+    let index = 0;
+    const total = track.children.length;
+
+    setInterval(() => {
+        index = (index + 1) % total;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }, 5000);
+}
+    </script>
 </body>
 </html>
